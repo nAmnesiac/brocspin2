@@ -1,0 +1,1 @@
+nohup python /home/allenchen/brocspin/script/run_dfhbi.py -c /home/allenchen/brocspin/structures/CG_pdb/dfhbi_CG.pdb -p /home/allenchen/brocspin/structures/psf/dfhbi_CG.psf -e non -t 300 -s 150 &> log &

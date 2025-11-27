@@ -1,0 +1,1 @@
+python /home/allenchen/brocspin/script/run.py -c /home/allenchen/brocspin/structures/CG_pdb/8k7w_CG.pdb -p /home/allenchen/brocspin/structures/psf/8k7w.psf -e non -t 310.15 -s 150

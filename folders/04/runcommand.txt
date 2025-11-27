@@ -1,0 +1,1 @@
+nohup /home/allenchen/brocspin/script/batchsim01.sh &> batchsim01.log &
