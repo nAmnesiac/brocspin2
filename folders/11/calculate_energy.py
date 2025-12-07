@@ -215,16 +215,19 @@ def SimpleRNASystem(psf, system, ffs):
     go_data = np.loadtxt(go_path, comments="#", dtype=str)
     atom1_ids = go_data[:, 0].astype(int) -1
     atom2_ids = go_data[:, 1].astype(int) -1
-    epsilons = go_data[:, 4].astype(float) * -1 * 4.184 * unit.kilojoule_per_mole #kcal/mol to kJ/mol : charmm --> openmm, distance unit is fine due to ratio
+    epsilons = go_data[:, 4].astype(float) * -1 * 4.184 * unit.kilojoule_per_mole
     sigmas = go_data[:, 5].astype(float) * unit.nanometer
+    
+    # Get atoms from YOUR topology instance (not the module)
+    # Replace 'pdb' with whatever variable holds your topology
+    atoms = list(pdb.topology.atoms())  # or modeller.topology.atoms()
+    
     for atom1, atom2, eps, sig in zip(atom1_ids, atom2_ids, epsilons, sigmas):
         go_force.addBond(atom1, atom2, [eps, sig])
+        atom1_name = atoms[atom1].name
+        atom2_name = atoms[atom2].name
+        print(f"Added GO bond: {atom1_name} ({atom1}) - {atom2_name} ({atom2})")
     system.addForce(go_force)
-
-    # delete the NonbondedForce and HarmonicAngleForce
-    system.removeForce(nbforce_index)
-    system.removeForce(hmangle_index)
-    return system
 
 
 # 0) set variables in the simulation

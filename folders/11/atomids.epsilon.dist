@@ -1,5 +1,6 @@
-327 255 DFH ADE -1.00 3.84
-200 326 URA DFH -1.00 3.34
-227 323 GUA DFH -1.00 3.30
-44  326 GUA DFH -1.00 3.47
-221 323 ADE DFH -1.00 3.25
+# Atom1 Atom2 Residue1 Residue2 Epsilon Distance(nm) (with atom ids? or just index - not sure)
+328 256 DFH ADE -1.00 0.384
+201 327 URA DFH -1.00 0.334
+228 324 GUA DFH -1.00 0.330
+45  327 GUA DFH -1.00 0.347
+222 324 ADE DFH -1.00 0.325
