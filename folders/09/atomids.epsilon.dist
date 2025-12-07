@@ -1,2 +1,6 @@
-# Atom1 Atom2 Residue1 Residue2 Epsilon Distance(nm)
-93 4837 Lys Asn -1.21 1.066
+# Atom1 Atom2 Residue1 Residue2 Epsilon Distance(nm) (with atom ids? or just index - not sure)
+328 256 DFH ADE -1.00 3.84
+201 327 URA DFH -1.00 3.34
+228 324 GUA DFH -1.00 3.30
+45  327 GUA DFH -1.00 3.47
+222 324 ADE DFH -1.00 3.25

@@ -207,7 +207,7 @@ def SimpleRNASystem(psf, system, ffs):
     
     print('\n# add custon go potential restraint')
     #sc = args.scale
-    go_force = CustomBondForce("epsilon * {} * ((sigma/r)^8 - 2 * (sigma/r)^4);")
+    go_force = CustomBondForce("epsilon * ((sigma/r)^8 - 2 * (sigma/r)^4);")
     go_force.setName("go_potential_restraint")
     go_force.addPerBondParameter("epsilon")
     go_force.addPerBondParameter("sigma")
